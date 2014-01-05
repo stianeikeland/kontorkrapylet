@@ -7,7 +7,7 @@
 ### Controller
 
 - [x] Raspberry Pi
-- [ ] Bypass poly fuses on raspberry pi
+- [x] Bypass poly fuses on raspberry pi
 - [x] Atmega328 for Motor PWM and servo control.
 
 ### Motor driver
@@ -21,6 +21,7 @@
 - [ ] Charger?
 - [ ] Holder (with protection?) [example](http://www.fasttech.com/products/0/10002230/1161600-2s2p-74v-18650-holder-with-battery-build-in-pcm-pr)
 - [ ] Low battery warning [voltage buzzer](http://www.ebay.com/itm/1-8S-Lipo-Li-ion-Fe-Battery-Voltage-2IN1-Tester-Low-Voltage-Buzzer-Alarm-BY-/200988709760?pt=AU_Toys_Hobbies_Radio_Controlled_Vehicles&hash=item2ecbdc5380)
+- [ ] 5v (or 3v3) step-down for raspberry pi, maybe KIS3R33S? (10k res to adj pin -> gnd for 5v)
 
 ### Webcam
 
