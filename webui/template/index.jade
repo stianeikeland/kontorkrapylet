@@ -1,0 +1,40 @@
+doctype html
+
+html
+	head
+		title="Robot"
+		script(src='/socket.io/socket.io.js')
+		script(src='/web.js')
+
+		style.
+			body {
+				text-align: center;
+				font-family: Monaco, Consolas, Inconsolata, 'Deja Vu Sans Mono', 'Droid Sans Mono', 'Andale Mono', 'Lucida Console', monospace;
+				font-size: 16px;
+			}
+
+			.container {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+
+				height: 50%;
+			}
+
+			.warning {
+				margin-top: 10px;
+				color: rgb(153, 0, 85);
+			}
+
+			.help {
+				color: rgb(102, 153, 0);
+			}
+
+	body
+		.container
+			h1 &gt;Robot&lt;
+			.help Bruk {W,A,S,D} for å styre, mellomrom for brems.
+			.warning La aldri spenning synke under 6.0V.
