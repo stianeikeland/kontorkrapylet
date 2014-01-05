@@ -1,5 +1,5 @@
 
-#define AUTOSTOP_INTERVAL 2000
+#define AUTOSTOP_INTERVAL 3000
 
 #define FORWARD 'F'
 #define BACKWARD 'B'
@@ -52,13 +52,13 @@ void backward() {
 }
 
 void turnLeft() {
-	motorBackward(motor_left);
+	motorStop(motor_left);
 	motorForward(motor_right);
 }
 
 void turnRight() {
 	motorForward(motor_left);
-	motorBackward(motor_right);
+	motorStop(motor_right);
 }
 
 void stop() {
@@ -78,18 +78,17 @@ void serialEvent() {
 
 void loop() {
 
-	if (millis() - lastEvent > AUTOSTOP_INTERVAL) {
-		// Stop if it's been too long since last event.
-		stop();
-	} else {
-		switch (direction) {
-		    case FORWARD: forward(); break;
-		    case BACKWARD: backward(); break;
-		    case LEFT: turnLeft(); break;
-		    case RIGHT: turnRight(); break;
-		    case STOP:
-		    default: stop();
-		}
+	// Stop if it's been too long since last event.
+	if (millis() - lastEvent > AUTOSTOP_INTERVAL)
+		direction = STOP;
+
+	switch (direction) {
+	    case FORWARD: forward(); break;
+	    case BACKWARD: backward(); break;
+	    case LEFT: turnLeft(); break;
+	    case RIGHT: turnRight(); break;
+	    case STOP:
+	    default: stop();
 	}
 
 }
