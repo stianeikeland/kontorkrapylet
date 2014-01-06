@@ -1,6 +1,6 @@
 # Office robot
 
-![Office bot](http://distilleryimage4.s3.amazonaws.com/cd2906ba748011e398be0a56c26576e4_6.jpg)
+[![Office bot](http://www.eikeland.se/other/robot.png)](http://www.eikeland.se/other/robot.mp4)
 
 ## Hardware
 
