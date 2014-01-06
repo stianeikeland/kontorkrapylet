@@ -1,6 +1,6 @@
 window.onload = () ->
 
-	socket = io.connect '#{window.location.protocol}://#{window.location.host}'
+	socket = io.connect()
 
 	socket.on 'connect', () ->
 		console.log "Socket connected"
