@@ -1,5 +1,5 @@
 
-#define AUTOSTOP_INTERVAL 3000
+#define AUTOSTOP_INTERVAL 1000
 
 #define FORWARD 'F'
 #define BACKWARD 'B'
