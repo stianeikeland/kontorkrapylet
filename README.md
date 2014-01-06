@@ -36,6 +36,10 @@ Should camera be turnable or fixed?
 - [x] Servo
 - [ ] Mount
 
+### Speaker
+
+- [x] LM386 audio [amp](LM386 Audio Amplifier Module) (ordered)
+
 ## Software
 
 ### Microcontroller
