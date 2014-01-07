@@ -4,6 +4,7 @@ html
 	head
 		title="Robot"
 		script(src='/socket.io/socket.io.js')
+		script(src='/jquery-2.0.3.min.js')
 		script(src='/web.js')
 
 		style.
@@ -21,7 +22,6 @@ html
 				right: 0;
 				margin: auto;
 
-				height: 50%;
 			}
 
 			.warning {
@@ -33,8 +33,43 @@ html
 				color: rgb(102, 153, 0);
 			}
 
+			.buttons {
+				margin-top: 25px;
+			}
+
+			.buttonrow button {
+				padding: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				-webkit-appearance: none;
+				border: 1px solid #000;
+				background-color: #fff;
+				font-size: 18px;
+			}
+
+			.webcam {
+				margin-top: 25px;
+			}
+
+			.buttonrow button#space {
+				margin-top: 25px;
+			}
+
 	body
 		.container
 			h1 &gt;Robot&lt;
 			.help Bruk {W,A,S,D} for å styre, mellomrom for brems.
 			.warning La aldri spenning synke under 6.0V.
+
+			.webcam
+				img(src="http://192.168.73.60:8001/")
+
+			.buttons
+				.buttonrow
+					button#w ^
+				.buttonrow
+					button#a &lt;
+					button#s v
+					button#d &gt;
+				.buttonrow
+					button#space Brems!
