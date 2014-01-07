@@ -1,6 +1,21 @@
-# Office robot
+# Kontorkrapylet
 
+Your friendly neighbourhood office robot.
+
+[![Office bot](http://www.eikeland.se/other/robot3.jpg)](http://www.eikeland.se/other/robot3.mp4)
 [![Office bot](http://www.eikeland.se/other/robot.png)](http://www.eikeland.se/other/robot.mp4)
+
+## Software
+
+### Microcontroller
+
+UART connected microcontroller for pwm control of motors and servos.
+Currently only does simple on/off on H-bridge.
+
+### Webui
+
+Simple webui with streaming webcam, motor control.
+Nodejs with socket.io
 
 ## Hardware
 
@@ -13,6 +28,9 @@
 ### Motor driver
 
 - [x] [L293D board](http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=200982006661&ssPageName=ADME:L:OC:GB:3160) has been ordered.
+
+### Motors
+- [ ] Motors are crap, buy new ones? Steppers? geared DC?
 
 ### Power
 
@@ -40,14 +58,3 @@ Should camera be turnable or fixed?
 
 - [x] LM386 audio [amp](LM386 Audio Amplifier Module) (ordered)
 
-## Software
-
-### Microcontroller
-
-UART connected microcontroller for pwm control of motors and servos.
-Needs a simple binary protocol.
-
-### Webui
-
-Simple webui with streaming webcam, range finder and motor control.
-Ex: js with nodejs backend, socket.io
