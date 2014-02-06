@@ -72,6 +72,16 @@ html
 				display: none;
 			}
 
+			.soundoptions {
+				margin-top: 15px;
+			}
+
+			.soundoptions input {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+
 	body
 		.container
 			h1 &gt;Robot&lt;
@@ -79,7 +89,7 @@ html
 			.warning La aldri spenning synke under 6.0V.
 
 			.webcam
-				img(src="http://192.168.73.60:8001/")
+				img(src='http://192.168.73.60:8001/?action=stream')
 
 			.buttons
 				.buttonrow
@@ -93,5 +103,9 @@ html
 
 			.sounds
 				.soundbuttons
+				.soundoptions
+					input(type='checkbox', checked, id='localaudio')
+					| Spill lyd lokalt
+					input(type='checkbox', checked, id='robotaudio')
+					| Spill lyd på robot
 				.audioplayer
-

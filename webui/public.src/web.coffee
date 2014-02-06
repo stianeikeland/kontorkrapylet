@@ -27,7 +27,9 @@ $(document).ready ->
 
 	playSound = (file) ->
 		console.log "Playing #{file}"
-		socket.emit 'playSound', file
+		socket.emit 'playSound', file if $("input#robotaudio").prop('checked')
+
+		return if not $("input#localaudio").prop('checked')
 
 		element = $("<audio controls autoplay/>").html($("<source/>").attr(
 			{

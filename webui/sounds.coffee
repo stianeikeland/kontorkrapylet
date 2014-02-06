@@ -30,7 +30,7 @@ class SoundBoard
 		@listSounds (err, files) ->
 			if isValidFile sound, files
 				console.log "Playing #{sound}"
-				exec "mpg123 public/sounds/#{sound}"
+				exec "mpg123 --mix public/sounds/#{sound}"
 				return
 
 exports.SoundBoard = SoundBoard
