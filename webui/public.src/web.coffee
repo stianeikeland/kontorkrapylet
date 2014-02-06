@@ -24,3 +24,30 @@ $(document).ready ->
 	for key in ["w", "s", "a", "d", "space"]
 		elem = document.getElementById key
 		elem.onclick = ((k) -> (() -> keypress k))(key)
+
+	playSound = (file) ->
+		console.log "Playing #{file}"
+		socket.emit 'playSound', file
+
+		element = $("<audio controls autoplay/>").html($("<source/>").attr(
+			{
+				src: "/sounds/" + file
+				type: "audio/mpeg"
+			}))
+
+		$(".audioplayer").html(element)
+
+
+	$.get "/sounds", (sounds) ->
+		target = $(".soundbuttons")
+
+		addbutton = (sound) ->
+			console.log sound
+			filename = sound.filename
+			elem = $('<button/>')
+				.html(sound.description)
+				.click(-> playSound filename)
+
+			target.append elem
+
+		addbutton sound for sound in sounds
